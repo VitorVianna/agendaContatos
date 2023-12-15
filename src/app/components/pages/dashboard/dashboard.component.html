@@ -1,0 +1,21 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-9">
+            <h3>Página inicial</h3>
+            <p>Seja bem vindo a agenda de contatos.</p>
+        </div>
+        <div class="col-md-3">
+            <label>Tipo do Gráfico</label>
+            <select class="form-select" [(ngModel)]="tipoGrafico" (change)="ngOnInit()">
+                <option value="column">Colunas</option>
+                <option value="bar">Barras</option>
+                <option value="line">Linhas</option>
+                <option value="pie">Pizza</option>
+                <option value="area">Área</option>
+            </select>
+        </div>
+    </div>
+
+    <div [chart]="grafico"></div>
+
+</div>
